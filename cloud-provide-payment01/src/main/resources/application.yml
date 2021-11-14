@@ -1,0 +1,23 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: payment
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://dbserver:3306/nnshop?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: 8nR2#LP88qosBI2D
+    dbcp2:
+      min-idle: 5 #最小空闲连接
+      initial-size: 5 #初始化连接数
+      max-total: 5 #最大空闲连接
+      max-wait-millis: 200 #最大等待时间
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7010.com:7010/eureka/,http://eureka7011.com:7011/eureka/
